@@ -1,78 +1,153 @@
+/* base */
+
+:root {
+    --mainpurple: #221734;
+    --title: #E9E2D4;
+    --gradient1: linear-gradient(128deg, rgba(56, 0, 99, 1) 28%, rgba(60, 36, 167, 1) 100%);
+    --gradient2: linear-gradient(128deg, rgb(197 81 199 / 55%) 31%, rgb(88 26 185 / 91%) 100%);
+    --gradient3: -webkit-linear-gradient(128deg, rgb(197 81 199 / 55%) 31%, rgb(88 26 185 / 91%) 100%);
+}
+
 body {
-    background-color: #1c0e27;
+    background-color: var(--mainpurple);
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-
-#container {
-    margin: 30px;
-    background-color: #231835;
-    border-radius: 72px;
-    width: auto;
-    height: auto;
-    word-break: break-all;
-    padding: 100px;
-    color: #676069;
+a:hover {
+    text-decoration: none;
 }
 
+/* header */
 
-
-
-/** body {
-    background-color: #191818;
+#header1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
 }
 
-h1 {
-    background: #1f1e1e;
-    padding: 10px;
-    color: #575555;
-    text-align: center;
-    font-family: 'Alegreya SC', sans-serif;
-    font-weight: bold;
+/* titre du site */
+
+.title {
+    color: var(--title);
+    font-family: 'alatsi';
     font-size: 3em;
+    text-transform: lowercase;
+    text-shadow: #AC43BB 0px 0px 16px;
+    margin: 5px 26px;
 }
 
-.iconav {
-    font-size: 8em;
-    top: 18px;
-    left: 626px;
+/* navigation */
+
+/* #navlinks {
+
+} */
+
+nav a, nav a:hover {
+    color: var(--title);
+    font-family: 'alatsi';
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
-.ra-raven:before {
-    color: transparent;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(4deg, rgb(75 0 133) 28%, rgb(81 57 187) 100%);
+nav li {
+    /* background-color: rgba(0, 0, 255, 0.212); */
+    display:inline;
+    margin-right: 10px;
 }
 
-.ra-raven {
-    filter: drop-shadow(0px 0px 15px #131113);
+nav ol {
+    margin: auto;
 }
 
-.subtitle {
-    padding: 10px;
-    color: #575555;
-    text-align: center;
-    font-family: 'Aladin';
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-size: 12px;
+ul {
+    overflow:hidden
 }
 
-.button {
-    background: linear-gradient(128deg, rgba(56, 0, 99, 1) 28%, rgba(60, 36, 167, 1) 100%);
+/* menu déroulant */
+
+.menu {
+    /* background-color: rgba(128, 0, 128, 0.13); */
+}
+
+.fa-bars {
+    font-size: 1.8em;
+    color: var(--title);
+    margin: 5px;
+}
+
+/* barre extra droite */
+
+#container-extra {
+    justify-content: flex-end;
+} 
+
+.extraside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    padding: 28px 5px;
+    backdrop-filter: blur(5px);
+    background-color: rgb(0 0 0 / 20%);
+    width:50px;
+    height: 500px;
     border-radius: 12px;
-    color: #f7efff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: 2.6;
-    padding: 0.3em 1.5em;
-    margin: 20%;
-    transition: transform .5s ease;
+    box-shadow: var(--mainpurple) 0 0 12px;
+
 }
 
-.button:hover {
-    transform: scale(1.1);
-    padding: 0.4em 1.6em;
-} **/
+.fa-twitter, .fa-etsy, .fa-instagram, .fa-home {
+    color: var(--title);
+    padding: 8px 0;
+}
+
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: rgb(63 41 79);
+    margin: 15px;
+  }
+
+  .toggle-theme {
+    /* background: #735a99; */
+    background: var(--gradient2);
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 7px;
+    color: white;
+    box-shadow: #221734 0 0 7px;
+  }
+
+/* milieu */
+
+#container-main {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.accueil {
+    /* background-color: #ffffff; */
+}
+
+h2 {
+    background: var(--gradient3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5em;
+    width: 400px;
+    text-indent: 50px;
+    font-family: 'Cinzel';
+    filter: drop-shadow(#1f1e1e 0 0 5px);
+    margin: 135px 101px 0 0;
+}
+
+.accueil p {
+    max-width: 400px;
+    color: var(--title);
+    font-family: 'alatsi';
+}
