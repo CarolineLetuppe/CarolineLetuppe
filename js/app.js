@@ -1,6 +1,6 @@
 /* Loader */
 
-let loader = document.querySelector('.loader');
+/* let loader = document.querySelector('.loader');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -8,4 +8,4 @@ window.addEventListener('DOMContentLoaded', () => {
         loader.style.top = '-100vh';
     }, 2300)
 
-})
+}) */
